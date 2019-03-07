@@ -16,22 +16,6 @@
           <span slot="subtitle">Subtile</span>
         </q-toolbar-title>
       </q-toolbar>
-      <q-tabs>
-        <q-route-tab
-          slot="title"
-          icon="map"
-          to="/your/route"
-          replace
-          label="One Tab"
-        />
-        <q-route-tab
-          slot="title"
-          icon="assignment"
-          to="/some/other/route"
-          replace
-          label="Other Tab"
-        />
-      </q-tabs>
     </q-layout-header>
 
     <!-- (Optional) The Footer -->
@@ -49,22 +33,6 @@
           <span slot="subtitle">Subtile</span>
         </q-toolbar-title>
       </q-toolbar>
-      <q-tabs>
-        <q-route-tab
-          slot="title"
-          icon="map"
-          to="/your/route"
-          replace
-          label="One Tab"
-        />
-        <q-route-tab
-          slot="title"
-          icon="assignment"
-          to="/some/other/route"
-          replace
-          label="Other Tab"
-        />
-      </q-tabs>
     </q-layout-footer>
 
     <!-- (Optional) A Drawer; you can add one more with side="right" or change this one's side -->

@@ -1,15 +1,17 @@
-import axiosInstance from '../../plugins/axios';
+import http from '../http';
 
 export default {
-  login(email, senha) {
-    return axiosInstance.post('api/login',
+  login(emails, senha) {
+    return http.post('api/login',
       {
-        email,
+        email: emails,
         password: senha,
       })
       .then((response) => {
         localStorage.setItem('Token', response.data.access_token);
-      }).catch((error) => {
+        console.log(response);
+      })
+      .catch((error) => {
         console.log(error);
       });
   },

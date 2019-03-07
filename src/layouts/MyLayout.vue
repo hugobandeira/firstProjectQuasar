@@ -1,15 +1,8 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHh Lpr lFf" class="backgroud">
     <q-page-container>
       <router-view />
     </q-page-container>
-    <q-layout-footer>
-      <q-toolbar>
-        <q-toolbar-title>
-          Footer
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-layout-footer>
   </q-layout>
 </template>
 
@@ -30,4 +23,7 @@ export default {
 </script>
 
 <style>
+.backgroud{
+  background-color: rgb(234, 236, 250);
+}
 </style>

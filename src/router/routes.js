@@ -5,17 +5,18 @@ import Posts from 'pages/Posts';
 
 const routes = [
   {
-    path: '/',
+    path: '/login',
     component: () => import('layouts/MyLayout.vue'),
     children: [
       { path: '', component: LoginPage },
+      { path: '/recuperar-senha', component: LoginPage },
     ],
   },
   {
     path: '/user',
     component: User,
     children: [
-      { path: 'profile', component: Profile },
+      { path: 'perfil', component: Profile },
       { path: 'posts', component: Posts },
     ],
   },
