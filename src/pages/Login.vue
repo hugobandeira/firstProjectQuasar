@@ -55,6 +55,7 @@
 
 <script>
 import auth from '../services/auth/index';
+import http from '../services/http/index';
 // import { Dialog } from 'quasar';
 
 export default {
@@ -67,9 +68,33 @@ export default {
   },
   methods: {
     logar() {
-      auth.login(this.email, this.senha);
+      auth.login(this.email, this.senha)
+        .then((response) => {
+          if (response) {
+            this.$router.push('/user/perfil');
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
       // Dialog.create();
       // this.$routes.push('/user');
+    },
+  },
+  mounted() {
+    const token = localStorage.getItem('token');
+    if (token) {
+      http.get('api/user/')
+        .then((res) => {
+          this.email = res.data.email;
+          this.$router.push('/user/perfil');
+          console.log(res.data);
+        });
+    }
+  },
+  computed: {
+    set: () => {
+      console.log('ssdsf');
     },
   },
 };

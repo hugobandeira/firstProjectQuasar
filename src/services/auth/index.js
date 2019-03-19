@@ -9,10 +9,14 @@ export default {
       })
       .then((response) => {
         localStorage.setItem('Token', response.data.access_token);
-        console.log(response);
+        return response;
       })
       .catch((error) => {
+        // window.alert(error);
         console.log(error);
       });
+  },
+  logout() {
+    localStorage.removeItem('Token');
   },
 };

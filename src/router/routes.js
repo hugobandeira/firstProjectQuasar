@@ -2,6 +2,7 @@ import LoginPage from 'pages/Login';
 import User from 'layouts/User';
 import Profile from 'pages/Profile';
 import Posts from 'pages/Posts';
+import auth from '../services/auth/index';
 
 const routes = [
   {
@@ -9,8 +10,21 @@ const routes = [
     component: () => import('layouts/MyLayout.vue'),
     children: [
       { path: '', component: LoginPage },
-      { path: '/recuperar-senha', component: LoginPage },
+      {
+        path: '/logout',
+        component: () => {
+          auth.logout();
+        },
+      },
+      {
+        path: '/recuperar-senha',
+        component: LoginPage,
+      },
     ],
+  },
+  {
+    path: '',
+    component: User,
   },
   {
     path: '/user',
