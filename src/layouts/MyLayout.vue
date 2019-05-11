@@ -1,9 +1,11 @@
 <template>
-  <q-layout view="lHh Lpr lFf" class="backgroud">
+<div class="backgroud">
+  <router-view />
+</div>
+  <!-- <q-layout view="lHh Lpr lFf" class="backgroud">
     <q-page-container>
-      <router-view />
     </q-page-container>
-  </q-layout>
+  </q-layout> -->
 </template>
 
 <script>
@@ -24,6 +26,7 @@ export default {
 
 <style>
 .backgroud{
-  background-color: rgb(234, 236, 250);
+  background-image: url("https://images6.alphacoders.com/330/thumb-1920-330183.jpg");
+  /* background-color: rgb(234, 236, 250); */
 }
 </style>

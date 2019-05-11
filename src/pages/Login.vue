@@ -2,7 +2,7 @@
   <section class="">
     <div>
       <form class="container" @submit.prevent="logar()">
-          <q-card color="white" style="width: 300px">
+          <q-card color="white">
             <q-card-title>
                Login
             </q-card-title>
